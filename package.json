@@ -1,0 +1,36 @@
+{
+  "name": "event-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-client": "cd client && npm start",
+    "dev": "concurrently 'npm run start-server' 'npm run start-client'",
+    "start-server": "nodemon server.js",
+    "heroku-postbuild": "cd client && npm i && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dokinqs/event-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dokinqs/event-project/issues"
+  },
+  "homepage": "https://github.com/dokinqs/event-project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mapbox-gl": "^0.45.0",
+    "morgan": "^1.9.0",
+    "node-fetch": "^2.1.2",
+    "nodemon": "^1.17.4",
+    "pg-promise": "^8.4.3"
+  }
+}
